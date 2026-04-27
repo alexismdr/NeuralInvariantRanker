@@ -34,6 +34,8 @@ class RankerDataSetForCodex(TorchDS):
             return 12288
         elif model_name == 'text-embedding-ada-002':
             return 1536
+        elif model_name == 'bge-large':
+            return 1024
         else:
             raise Exception(f"Unknown model name {model_name}")
 
