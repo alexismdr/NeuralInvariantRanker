@@ -225,7 +225,7 @@ if __name__ == "__main__":
         already_computed = embedder.embed(to_compute, already_computed)
         counter.kill()
         
-        with open(os.path.join(output_dir, f"{args.model_name}.json"), 'w') as f:
+        with open(os.path.join(output_dir, f"{args.model_name}.json"), 'w+') as f:
             json.dump(already_computed, f)
     
     
