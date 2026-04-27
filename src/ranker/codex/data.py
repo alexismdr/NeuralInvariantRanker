@@ -66,7 +66,7 @@ class RankerDataSetForCodex(TorchDS):
         else:
             raise Exception("Initial embeddings not provided")
         self.data = load_dataset(
-            path=path, data_dir=path, data_files=data_files, split="train", cache_dir=cache_dir, name=name
+            path=path, data_files=data_files, split="train", cache_dir=cache_dir, name="default"
         )
         columns = self.data.column_names
         self.count = 0
