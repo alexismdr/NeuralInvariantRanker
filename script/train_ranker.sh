@@ -31,6 +31,10 @@ echo $DATA_BASE_DIR
 
 if [[ $im == "ada_002" ]]; then
     codex_model="text-embedding-ada-002"
+elif [[ $im == "bert" ]]; then
+    codex_model="codebert"
+elif [[ $im == "bge" ]]; then
+    codex_model="bge-large"
 elif [[ $im == "davinci" ]]; then
     echo "davinci-similarity model is deprecated. Please use ada_002 instead." >&2;
     exit 1;
