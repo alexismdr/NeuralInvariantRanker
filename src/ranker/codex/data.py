@@ -36,6 +36,8 @@ class RankerDataSetForCodex(TorchDS):
             return 1536
         elif model_name == 'bge-large':
             return 1024
+        elif model_name == 'codebert':
+            return 768
         else:
             raise Exception(f"Unknown model name {model_name}")
 
